@@ -15,10 +15,16 @@ public class Loader
             String command = reader.readLine().trim();
             if(command.equals("LIST"))
             {
-                System.out.println("Список всех лекарств:");
-                for(String name : medication)
+                if(medication.size() == 0)
                 {
-                    System.out.println(name);
+                    System.out.println("Список лекарств пуст!");
+                }
+                else {
+                    System.out.println("Список всех лекарств:");
+                    for(String name : medication)
+                    {
+                        System.out.println(name);
+                    }
                 }
             }
             else {
